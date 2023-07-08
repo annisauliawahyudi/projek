@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nisaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="nisaasa.jpg" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    :root {
+      font-size: 15px;
+      /* Primary */
+      --var-soft-blue: hsl(215, 51%, 70%);
+      --var-cyan: hsl(178, 100%, 50%);
+      /* Neutral */
+      --var-main-darkest: hsl(217, 54%, 11%);
+      --var-card-dark: hsl(216, 50%, 16%);
+      --var-line-dark: hsl(215, 32%, 27%);
+      --var-lightest: white;
+      /* Fonts */
+      --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+      --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+      --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: var(--var-main-darkest);
+      font-size: 1.7rem;
+    }
+
+    body h5 {
+      font-size: 3rem;
+      font: var(--var-heading);
+      color: var(--var-lightest);
+      padding: 1.2em 0;
+    }
+
+    p {
+      font: var(--var-para);
+      color: var(--var-soft-blue);
+    }
+    object{
+    position: fixed;
+   
+    z-index: -1;
+    }
+
+    
+
+    .card-container {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      margin-top: 12rem;
+    }
+
+    button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      max-width: 10%;
+    }
+
+    .card {
+      position: absolute;
+      width: 100%;
+      height: 80%;
+      background-color: var(--var-card-dark);
+      padding-right: 3rem;
+      padding-left: 3rem;
+      transition: transform 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      
+    }
+
+    .card:not(:last-child) {
+      transform: translateY(40px);
+    }
+
+    .card.hide {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    .close-btn {
+      align-self: center;
+      width: 40%;
+    }
+
+    /* Mengubah tampilan kontrol audio */
+    audio::-webkit-media-controls-panel {
+      background-color: var(--var-soft-blue);
+      border-radius: 5px;
+      padding-left: 1.4rem;
+      padding-right: 3rem;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(15px);
+    }
+
+    /* Mengubah tampilan tombol play/pause */
+    audio::-webkit-media-controls-play-button {
+      color: #fff;
+      border-radius: 50%;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    /* Mengubah tampilan progress bar */
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display,
+    audio::-webkit-media-controls-seek-back-button,
+    audio::-webkit-media-controls-seek-forward-button {
+      color: #000000;
+      font-size: 14px;
+    }
+
+    .w3-spin {
+      border-radius: 100%;
+      width: 30%;
+      position: absolute;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      img {
+        max-width: 70%;
+      }
+
+      .card-container {
+        margin-top: 5rem;
+      }
+
+      .card {
+        max-height: 100%;
+        padding-left: 4rem;
+      }
+
+      button {
+        max-width: 100%;
+      }
+
+      audio {
+        height: 2rem;
+        width: 100%;
+      }
+
+      .w3-spin {
+        width: 30%;
+      }
+    }
+
+    @keyframes balloon {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+
+    @keyframes moveUp {
+      0% {
+        transform: translateY(10rem);
+      }
+      100% {
+        transform: translateY(-100vh);
+      }
+    }
+
+    .card:nth-child(15) .balloon {
+      position: relative;
+      animation: balloon 5s linear forwards;
+    }
+
+    .card:nth-child(15) .balloon {
+      animation: moveUp 10s linear forwards;
+    }
+  </style>
+</head>
+<body>
+  <object data="as.svg" ></object>
+  <div class="container">
+    <div class="card-container">
+      <div class="card">
+        <h5 class="card-title">hbd nisa cantikkkk</h5>
+        <p class="card-text">nisa paling cantik seduniaaaaa</p>
+        <center>
+          <audio controls autoplay loop>
+            <source src="hppy.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+        </center>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">kupon</h5>
+        <p class="card-text">pulang bareng :<del>FDR5477QL</del> </p>
+        <p class="card-text">nitip tas pas pulang:<del>DDSTQ65Y</del> </p>
+        <p class="card-text">nitip ke kantin :FFGT567ZX.</p>
+        <p class="card-text">traktir es jeruk :FF54FSIQ.</p>
+        <p class="card-text">wkwkw lupa njir udh gabisa lagi, tpi gapapa tulis aja lah ya biar keren</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3znQ9i61vfe2E7URHlOiyc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">stranger?</h5>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/21uFPefbgeR3QLVJWATlrr?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+
+      <div class="card" >
+        <h5 class="card-title">semoga</h5>
+        <p class="card-text">semoga naon nya binggung hehe, oh heeh, semoga si nisa kalo bales chat ke temen ga lama, ya minimal kalo lama dibales jangan ga dibales, kasian udh ngetik cape cape eh ga dibales.</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">semoga 2</h5>
+        <p class="card-text"> semoga tingginya nambah, semoga bolehen punya kucing dan semoga ga suka sama orang selain saya, tpi kalo ada juga gpp si eh tpi gimana ya, gpp tpi jangan lah kalo bisa tpi kalo emng suka mah yaudah lah ya mau gimana lagi</p>
+        
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+         <h5 class="card-title">hbd lagi</h5>
+        <p class="card-text">hbd nisa semoga bisa laravel, node.js, javascript, php, css, tailwind, C++, C#, flutter, reactJs, pokokna naon we lah yang penting bisa, semoga jadi orang yang lebih baik meskipun udh baik.</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+       <div class="card">
+        <h5 class="card-title">  &#58;&#40;</h5>
+       <p class="card-text"> makan nasi goreng di depan tikus yang gede , seru juga ya kalo di inget inget, tadinya mau ke burger bangor, tapi gajadi karna kelewat, akhirnya nyari di maps, eh ketemu burger bangor yang sedikit jauh, akhirnya kesana, </p>
+       <button class="close-btn btn btn-secondary">next</button>
+     </div>
+
+     <div class="card" style="padding-top: 2rem;">
+     <p class="card-text"> tpi pas di jalan kamu malah pingin nasi goreng, yaudah lah ya, pas di pasar sukasari akhirnya nemu nasi goreng, eh pas duduk teh ngerasa aneh kok ada suara tikus, pas liat ke depan ternyata lagi pada nongkrong wkkwkw, maaf ya milih tempat teh ga liat liat, reflek atuh da pas liat tulisan nasi goreng, lucu juga ya liat kmu nyenggol ngenggol wae karna takut sama tikusnya.</p>
+     <button class="close-btn btn btn-secondary">next</button>
+   </div>
+
+     <div class="card" style="padding-top: 2rem;">
+      <p class="card-text"> pas beli roti, pas beli minuman di deket FM, pas beli jajanan di jembatan deket rumah si toriq, pas beli mie ayam pulang sekolah, pokoknya semuaaa nya seruu, makasiiih yaa udah mau ngelakuin banyak hal seru sama aku, maaf sering ngerepotin kmu.</p>
+      <button class="close-btn btn btn-secondary">next</button>
+    </div>
+
+      <div class="card">
+        <h5 class="card-title">sori</h5>
+        <p class="card-text">maaf ya kalo cuma gini doang,di hp kamu aneh ga, kalo aneh maaf ya, di aku mah udh pas responsif nya di kamu mah ga tau, pusing seteh mau nambahin apa lagi, intinya mah hbd we, baiklah kalo begitu, kumaha barudak well</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">gabut</h5>
+        <p class="card-text">nis kaget seteh pas pagi pagi kmu bilang itu tea,asa aneh kaget dan tidak percaya, parah si gaada angin gaada hujan tiba tiba ngomong gitu, tapi karna alasanya itu gapapa, tpi maksih udh mau bilang ga ngediemin</p>
+        
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">warning</h5>
+        <p class="card-text">ss ya kalo udah mau liat di hp kamu tampilannya kaya gimana</p>
+        <p class="card-text">kalo gaje ketik "biasa aja" di whatsApp</p>
+        <p class="card-text">kalo keren ketik "wow" di whatsApp</p>
+       
+      </div>
+    </div>
+  </div>
+  <script>
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function (card, index) {
+      if (index > 0) {
+        card.classList.add('hide');
+      }
+    });
+
+    cards.forEach(function (card, index) {
+      var closeButton = card.querySelector('.close-btn');
+      closeButton.addEventListener('click', function () {
+        if (index < cards.length - 1) {
+          card.classList.add('hide');
+          cards[index + 1].classList.remove('hide');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
